@@ -14,5 +14,5 @@ See the Dockerfile for more details.
 
 ## Run
 
-sudo docker run --name "postgis" -p 25432:5432 -d -t stancarney/postgis
+```sudo docker run --name "postgis" -p 25432:5432 -d -t stancarney/postgis```
 
