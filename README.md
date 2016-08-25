@@ -14,5 +14,21 @@ See the Dockerfile for more details.
 
 ## Run
 
+*Initial*
+
 ```sudo docker run --name "postgis" -p 25432:5432 -d -t stancarney/postgis```
+
+*Stop*
+
+```docker stop postgis```
+
+*Start*
+
+```docker stop postgis```
+
+## Connect
+
+```[/Applications/Postgres.app/Contents/Versions/9.5/bin/]psql -U dev -h localhost -p25432```
+
+password: dev
 
