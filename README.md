@@ -16,7 +16,7 @@ See the Dockerfile for more details.
 
 *Initial*
 
-```sudo docker run --name "postgis" -p 25432:5432 -d -t stancarney/postgis```
+```docker run --name "postgis" -p 25432:5432 -d -t stancarney/postgis```
 
 *Stop*
 
@@ -24,7 +24,7 @@ See the Dockerfile for more details.
 
 *Start*
 
-```docker stop postgis```
+```docker start postgis```
 
 ## Connect
 
