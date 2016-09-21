@@ -7,12 +7,15 @@ ENV PG_BIN /usr/lib/postgresql/9.3/bin
 ENV PG_DATA /var/lib/postgresql/9.3/main
 ENV PG_CONF /etc/postgresql/9.3/main/postgresql.conf
 
-RUN apt-get update && apt-get install -y -q \
- postgresql-9.3 \
- postgresql-server-dev-9.3 \
- postgresql-9.3-postgis-2.1 \
- postgresql-contrib-9.3 \
- postgresql-client-9.3 
+RUN apt-get update && \
+ apt-get install -y -q \
+   postgresql-9.3 \
+   postgresql-server-dev-9.3 \
+   postgresql-9.3-postgis-2.1 \
+   postgresql-contrib-9.3 \
+   postgresql-client-9.3 && \
+ apt-get clean -y && \
+ rm -rf /var/lib/apt/lists/*
  
 USER postgres
 RUN /etc/init.d/postgresql start && \
